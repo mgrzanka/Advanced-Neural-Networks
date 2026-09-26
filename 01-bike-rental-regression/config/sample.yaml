@@ -1,0 +1,6 @@
+test_data_path: "data/evaluation_data.csv"
+transformer_path: "outputs/models/transformer.pt"
+model_path: "outputs/epoch-200/ema_model.pt"
+hidden_size: 128
+batch_size: 64
+output_dir: "results"

@@ -1,0 +1,18 @@
+data_path: "data/data.csv"
+transformer_path: "outputs/models/transformer.pt"
+
+batch_size: 32
+hidden_size: 128
+lr: 0.001
+epochs: 200
+
+use_ema: true
+grad_acc_steps: 2
+
+output_dir: "outputs"
+save_checkpoint_steps_freq: 500
+save_model_freq_epochs: 50
+
+# Set both to resume: the checkpoint directory and the W&B run to continue.
+checkpoint_path: null
+wandb_run_id: null

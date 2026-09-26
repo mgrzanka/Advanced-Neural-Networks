@@ -26,3 +26,7 @@ checkpoints/
 generated_samples/
 
 .DS_Store
+
+# Hydra / Accelerate run directories (01) - final weights kept explicitly
+01-bike-rental-regression/outputs/20*/
+multirun/
