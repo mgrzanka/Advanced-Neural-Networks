@@ -1,0 +1,20 @@
+# Core
+torch
+torchvision
+numpy
+pandas
+scikit-learn
+
+# 02 / 04 - training infrastructure
+lightning
+wandb
+
+# 06 - transformers + parameter-efficient fine-tuning
+transformers
+peft
+beautifulsoup4
+
+# Visualisation / notebooks
+matplotlib
+seaborn
+jupyter

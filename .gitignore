@@ -1,0 +1,28 @@
+# environments
+.venv/
+__pycache__/
+*.pyc
+
+# experiment tracking
+wandb/
+wandb*
+lightning_logs/
+checkpoints/
+
+# course datasets (not redistributed)
+*.JPEG
+*.jpeg
+03-image-classification-cnn/data/train/
+03-image-classification-cnn/data/test/
+04-vae-and-diffusion/data/
+02-apartment-price-classification/data/
+
+# large checkpoints - reproduce with train.py
+04-vae-and-diffusion/models/diffusion/
+*.ckpt
+!04-vae-and-diffusion/models/vae/vae_ckp_epoch_491.ckpt
+
+# generated samples
+generated_samples/
+
+.DS_Store
