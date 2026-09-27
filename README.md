@@ -17,11 +17,11 @@ Every project directory holds both **runnable modules** (`.py`) and the **notebo
 
 ## Detailed descriptions
 
-**[01 — Bike rental regression](01-bike-rental-regression)** has the smallest model and the most infrastructure: Hydra configs, HF Accelerate, EMA weight averaging, cosine schedule with warmup, gradient accumulation, and checkpointing that resumes _mid-epoch_ with the W&B run picked back up rather than restarted. RMSLE is optimised directly as the loss rather than used only for grading.
+**[01 - Bike rental regression](01-bike-rental-regression)** has the smallest model and the most infrastructure: Hydra configs, HF Accelerate, EMA weight averaging, cosine schedule with warmup, gradient accumulation, and checkpointing that resumes _mid-epoch_ with the W&B run picked back up rather than restarted. RMSLE is optimised directly as the loss rather than used only for grading.
 
-**[04 — VAE & Diffusion](04-vae-and-diffusion)** implements DDPM from first principles: the noise schedule, the closed-form forward process, a U-Net with sinusoidal timestep embeddings and self-attention at the bottleneck, and the iterative reverse sampler. No `diffusers`, no pretrained weights — the whole loop is in [`diffusion_model.py`](04-vae-and-diffusion/diffusion_model.py). A VAE on the same data serves as the comparison baseline.
+**[04 - VAE & Diffusion](04-vae-and-diffusion)** implements DDPM from first principles: the noise schedule, the closed-form forward process, a U-Net with sinusoidal timestep embeddings and self-attention at the bottleneck, and the iterative reverse sampler. No `diffusers`, no pretrained weights - the whole loop is in [`diffusion_model.py`](04-vae-and-diffusion/diffusion_model.py). A VAE on the same data serves as the comparison baseline.
 
-**[06 — Hate speech & PEFT](06-hate-speech-peft)** compares four ways of adapting a 124M-parameter transformer to a small, heavily imbalanced dataset — frozen-backbone transfer, full fine-tuning, LoRA adapters (0.24% of weights) and prompt tuning (0.014%) — under one training loop and one metric, so the comparison is actually fair.
+**[06 - Hate speech & PEFT](06-hate-speech-peft)** compares four ways of adapting a 124M-parameter transformer to a small, heavily imbalanced dataset - frozen-backbone transfer, full fine-tuning, LoRA adapters (0.24% of weights) and prompt tuning (0.014%) - under one training loop and one metric, so the comparison is actually fair.
 
 ## Layout
 
@@ -41,4 +41,4 @@ PyTorch · PyTorch Lightning · HF Accelerate · Hydra · Hugging Face Transform
 
 ## A note on data and weights
 
-Course datasets (image folders, pickles, apartment CSVs) are distributed by the university and are **not** committed here — each project README says what to place in its `data/` directory. Trained checkpoints are kept only where small enough to be useful; the diffusion checkpoints (up to 484 MB) are excluded, and `train.py` reproduces them.
+Course datasets (image folders, pickles, apartment CSVs) are distributed by the university and are **not** committed here - each project README says what to place in its `data/` directory. Trained checkpoints are kept only where small enough to be useful; the diffusion checkpoints (up to 484 MB) are excluded, and `train.py` reproduces them.
